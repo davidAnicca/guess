@@ -11,7 +11,7 @@ let boian = "https://www.cs.ubbcluj.ro/wp-content/uploads/Boian-Rares-133x100.jp
 
 let hidden = "https://static.vecteezy.com/ti/vettori-gratis/t2/440467-icona-di-vettore-del-punto-interrogativo-gratuito-vettoriale.jpg";
 
-let link = "https://htmlpreview.github.io/?https://github.com/davidAnicca/guess/blob/main/index.html"
+let link = "https://raw.githack.com/davidAnicca/guess/main/index.html"
 
 const matrix = [
     [vancea, vancea, gabi, dan],
@@ -47,6 +47,12 @@ function set(row, col) {
 
 function reset(row, col) {
     document.getElementById("game").rows[row].cells[col].style.backgroundImage = "url(" + hidden + ")";
+    window.onclick = function (event) {
+        const modal = document.getElementById("myModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
 }
 
 function check() {
@@ -54,6 +60,14 @@ function check() {
         window.alert("Genius!");
         location.reload();
     }
+}
+
+function nasm() {
+    const modal = document.getElementById("vanceaPopup");
+    modal.style.display = "block";
+    setTimeout(() =>{
+        modal.style.display = "none";
+    }, 2000);
 }
 
 function clickOnGame(event) {
@@ -81,15 +95,19 @@ function clickOnGame(event) {
     } else {
         document.getElementById("game").rows[firstR].cells[firstC].classList.add("found");
         cell.classList.add("found");
+        if (first === vancea) {
+            nasm();
+        }
         first = "";
         firstR = "";
         firstC = "";
         found += 2;
-          setTimeout(() => {
-              check();
-          }, 1000);
+        setTimeout(() => {
+            check();
+        }, 1000);
     }
 }
+
 
 function start() {
     shuffleMatrix();
