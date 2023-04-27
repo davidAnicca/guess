@@ -5,11 +5,13 @@ let pop = "https://www.cs.ubbcluj.ro/wp-content/uploads/Mihis-Andreea.jpg";
 let dan = "https://www.cs.ubbcluj.ro/wp-content/uploads/Suciu-Dan.jpg";
 let sima = "https://www.cs.ubbcluj.ro/wp-content/uploads/Sima-Ioan.jpg";
 let czibula = "https://www.cs.ubbcluj.ro/wp-content/uploads/Czibula-Gabriela.jpg";
-let istvan = "https://www.cs.ubbcluj.ro/wp-content/uploads/Czibula-Gabriela.jpg";
+let istvan = "https://www.cs.ubbcluj.ro/wp-content/uploads/Czibula-Istvan.jpg";
 let diosan = "https://www.cs.ubbcluj.ro/wp-content/uploads/Diosan-Laura-300x400.jpg";
 let boian = "https://www.cs.ubbcluj.ro/wp-content/uploads/Boian-Rares-133x100.jpg";
 
 let hidden = "https://static.vecteezy.com/ti/vettori-gratis/t2/440467-icona-di-vettore-del-punto-interrogativo-gratuito-vettoriale.jpg";
+
+let link = "https://htmlpreview.github.io/?https://github.com/davidAnicca/guess/blob/main/index.html"
 
 const matrix = [
     [vancea, vancea, gabi, dan],
